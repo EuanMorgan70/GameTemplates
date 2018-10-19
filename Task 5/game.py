@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-from map import rooms
+from map import *
 from player import *
 from items import *
 from gameparser import *
+game = True
 
 
 
@@ -267,6 +268,9 @@ def execute_take(item_id):
                 inventory.append(current_room["items"].pop(item))
                 item_in_room = True
                 break
+    
+    
+        
 
     if item_in_room == False:
         print("\nYou cannot take that")
@@ -282,9 +286,12 @@ def execute_drop(item_id):
             current_room["items"].append(inventory.pop(item))
             item_in_room = True
             break
+    win2()
 
     if item_in_room == False:
         print("\nYou cannot drop that")
+
+    
     
 
 def execute_command(command):
@@ -358,11 +365,24 @@ def move(exits, direction):
     return rooms[exits[direction]]
 
 
+def win2():
+    print(len(rooms["Admins"]["items"]))
+    if len(rooms["Admins"]["items"]) == 6:
+        print("""\n \n \n \n \n \n \n \n
+              YOU MADE THE ADMINS SLIGHTLY DISGRUNTLED!!
+              YOU WIN!!!!! \n \n \n""")
+        input("Press enter to quit")
+        exit()
+        
+    
+
 # This is the entry point of our program
 def main():
 
+    print("Objective: Annoy MJ and Simon")
+    
     # Main game loop
-    while True:
+    while game == True:
         # Display game status (room description, inventory etc.)
         print_room(current_room)
         print_inventory_items(inventory)

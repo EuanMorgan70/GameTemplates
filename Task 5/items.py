@@ -7,7 +7,7 @@ item_id = {
     """You new shiny student ID card. Expires 1 June 2017.
 You wonder why they have printed a suicide hotline number on it?...""",
 
-    "mass": 0.1
+    "mass": 0.4
 }
 
 item_laptop = {
@@ -29,7 +29,7 @@ item_money = {
     "description":
     "This wad of cash is barely enough to pay your tuition fees.",
 
-    "mass": 0.1
+    "mass": 0.5
 }
 
 item_biscuits = {
@@ -39,7 +39,7 @@ item_biscuits = {
 
     "description": "A pack of biscuits.",
 
-    "mass": 0.2
+    "mass": 1
 }
 
 item_pen = {
@@ -49,7 +49,7 @@ item_pen = {
 
     "description": "A basic ballpoint pen.",
 
-    "mass": 0.1
+    "mass": 0.5
 }
 
 item_handbook = {
@@ -59,6 +59,6 @@ item_handbook = {
 
     "description": "This student handbook explains everything. Seriously.",
 
-    "mass": 0.6
+    "mass": 1.5
     
 }
